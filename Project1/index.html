@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Grav Shift</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="game-container">
+    <div id="game-stats">
+      <div class="stat-button">Level<span id="level-title">1</span></div>
+      <div class="stat-button">Moves <span id="moves-count">0</span></div>
+    </div>
+
+    <canvas id="game-canvas"></canvas>
+
+    <p class="instructions">
+      Use <b>Arrow Keys / WASD</b> to Shift Gravity. <br>
+      <b>Space</b> to Restart Level.
+    </p>
+
+    <!-- Leaderboard Overlay -->
+    <div id="leaderboard-overlay" class="hidden">
+      <div id="leaderboard-content">
+        <h2>Level Complete!</h2>
+        <div id="name-entry">
+          <label for="player-name">Your Name:</label>
+          <input type="text" id="player-name-input" placeholder="Enter name...">
+        </div>
+        <p>Global Rankings (Fewest Moves):</p>
+        <ul id="leaderboard-list"></ul>
+        <button id="next-level-btn">Next Level</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="game.js"></script>
+</body>
+
+</html>
